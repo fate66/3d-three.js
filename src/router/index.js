@@ -5,6 +5,8 @@ import point from '../views/3d/point.vue'
 import triangle from '../views/3d/triangle.vue'
 import line from '../views/3d/line.vue'
 import rect from '../views/3d/rect.vue'
+import rectNormal from '../views/3d/rectNormal.vue'
+import test from '../views/3d/test.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +40,21 @@ const router = createRouter({
       path: '/rect',
       name: 'rect',
       component: rect
+    },
+    {
+      path: '/rectNormal',
+      name: 'rectNormal',
+      component: rectNormal
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
+    },
+    {
+      path: '/world',
+      name: 'world',
+      component: () => import('@/views/3d/world.vue')
     }
   ]
 })

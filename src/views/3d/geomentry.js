@@ -75,4 +75,20 @@ const pointGeometry = function () {
   return bufferGeometry
 }
 
-export default { rectGeomentry, pointGeometry, rectIndexGeomentry }
+// 定义顶点法线数据,法线是光照的方向
+const normalRectGeomentry = function () {
+  // 创建空的几何体
+  const bufferGeometry = new THREE.BufferGeometry()
+  //设置几何体的顶点坐标
+  const vertices = new Float32Array([0, 0, 0, 20, 0, 0, 0, 10, 0, 20, 0, 0, 20, 10, 0, 0, 10, 0])
+  // 设置面法线数据，三个点组成一个三角形，在代码中三个点都需要写法向量来组成一个面的法向量
+  const normal = new Float32Array([0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1])
+  bufferGeometry.attributes.normals = new THREE.BufferAttribute(normal, 3)
+  //指定这个坐标几个值为一个顶点
+  const attribue = new THREE.BufferAttribute(vertices, 3)
+  // 设置几何体的坐标属性
+  bufferGeometry.attributes.position = attribue
+  return bufferGeometry
+}
+
+export default { rectGeomentry, pointGeometry, rectIndexGeomentry, normalRectGeomentry }
