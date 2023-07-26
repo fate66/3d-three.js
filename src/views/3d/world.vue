@@ -2,9 +2,20 @@
   <div id="webgl"></div>
 </template>
 
-<script setup>
-import { World } from '@/components/world/World.js'
+<script setup lang="ts">
+// import * as three from 'three'
+import { World } from './components/world/World.js'
 import { onMounted } from 'vue'
+
+// Object.assign(
+//   three,
+//   Object.defineProperty({}, 'tick', {
+//     enumerable: true,
+//     value: function () {}
+//   })
+// )
+
+// console.log(three)
 
 onMounted(() => {
   const world = new World(document.querySelector('#webgl'))
