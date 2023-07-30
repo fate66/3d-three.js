@@ -54,6 +54,26 @@ const router = createRouter({
       path: '/triangle2',
       name: 'triangle2',
       component: () => import('@/views/3d/case/triangle.vue')
+    },
+    {
+      path: '/shadow',
+      name: 'shadow',
+      component: () => import('@/views/3d/case/shadow.vue')
+    },
+    {
+      path: '/star',
+      name: 'star',
+      component: () => import('@/views/3d/case/star.vue')
+    },
+    {
+      path: '/points',
+      name: 'points',
+      component: () => import('@/views/3d/case/points.vue')
+    },
+    {
+      path: '/ball',
+      name: 'ball',
+      component: () => import('@/views/3d/case/ball.vue')
     }
   ]
 })

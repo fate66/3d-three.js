@@ -8,7 +8,7 @@ import { nextTick } from 'vue'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import Stats from 'three/addons/libs/stats.module.js'
-import geomentry from './geomentry.js'
+// import geomentry from './geomentry.js'
 
 // 设为点材质
 // 点渲染模式
