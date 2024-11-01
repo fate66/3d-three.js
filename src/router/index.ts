@@ -1,8 +1,7 @@
-import type { Router } from 'vue-router'
-
 import { createRouter, createWebHistory } from 'vue-router'
 
-const router = createRouter({
+const a: Storage = localStorage
+const router: A = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -46,9 +45,9 @@ const router = createRouter({
       component: () => import('@/views/3d/demo/test.vue')
     },
     {
-      path: '/world',
-      name: 'world',
-      component: () => import('@/views/3d/case/world.vue')
+      path: '/base',
+      name: 'base',
+      component: () => import('@/views/3d/base.vue')
     },
     {
       path: '/triangle2',
@@ -74,6 +73,31 @@ const router = createRouter({
       path: '/ball',
       name: 'ball',
       component: () => import('@/views/3d/case/ball.vue')
+    },
+    {
+      path: '/shader',
+      name: 'shader',
+      component: () => import('@/views/3d/case/shader.vue')
+    },
+    {
+      path: '/scene',
+      name: 'scene',
+      component: () => import('@/views/scene/scene.vue')
+    },
+    {
+      path: '/stereoCamera',
+      name: 'stereoCamera',
+      component: () => import('@/views/3d/demo/stereoCamera.vue')
+    },
+    {
+      path: '/fly',
+      name: 'fly',
+      component: () => import('@/views/3d/demo/fly.vue')
+    },
+    {
+      path: '/granary',
+      name: 'granary',
+      component: () => import('@/views/granary/index.vue')
     }
   ]
 })

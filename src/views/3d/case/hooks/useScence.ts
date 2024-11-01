@@ -6,7 +6,7 @@ function useScence(): any {
   // 场景
   const scene: Scene = new Scene()
   const axesHelper: AxesHelper = new AxesHelper(5)
-  // scene.add(axesHelper)
+  scene.add(axesHelper)
   // 渲染
   const renderer = new WebGLRenderer({ antialias: true, powerPreference: 'high-performance' })
   renderer.localClippingEnabled = true

@@ -46,8 +46,8 @@ import * as CANNON from 'cannon-es'
 // 点
 const { scene, renderer } = useScence()
 const camera: PerspectiveCamera = new PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.set(4, -3, 50)
-// createOrbitControls(camera, renderer)
+camera.position.set(0, 50, 80)
+createOrbitControls(camera, renderer)
 const texture = new TextureLoader()
 
 const ambientLight = new AmbientLight('white', 1)
